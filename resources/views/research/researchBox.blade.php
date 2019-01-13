@@ -10,7 +10,7 @@
 				<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$year}}">งานวิจัยปี {{$year}}</a>
 			</h4>
 		</div>
-		<div id="collapse{{$year}}" class="panel-collapse collapse-show" style="background-color:#f5f5f0">
+		<div id="collapse{{$year}}" class="panel-collapse collapse-show" style="background-color:#f2f2f2">
 			@foreach ($researchs as $research)
 				<div class="panel-body">{{$research->info}}</div>
 			@endforeach
