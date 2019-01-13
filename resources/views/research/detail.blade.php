@@ -60,20 +60,20 @@
 
 
 
-        <div class="card-read-person" style="font-weight: 100;background-color: white">
-            <div class="card-read-background"> {{-- CONTAINER --}}
+        <div class="card-read-person" style="font-weight: 100;background-color:white">
+            <div style="display: flex"> {{-- CONTAINER --}}
                 <div style="flex: 25%; background-color: #117167; border-radius: 50px 20px; padding: 15px; margin-bottom: 20px;  min-width: 220px"> {{-- LEFT IMAGE --}} 
                         <p class="name-th-card-read-person" style="text-align: center; color: #fff; margin-bottom: 5px; font-weight: 100">{{$teacher_read->name_th}}</p>
-                        <img class="image-header-card-person" style="width: 100%" src="{{url('image/crop/'.$teacher_read->image)}}"/>
+                        <img class="image-header-card-person" style="width: 100%;border-radius:1.5px" src="{{url('image/crop/'.$teacher_read->image)}}"/>
                         <br/>
                         <br/>
-                                <p class="header-small-detail" style="color:white;margin-left: 10px">สาขาที่เชี่ยวชาญ</p>
-                                <ul class="wrapper-small-detail" style="color:white">
+                                <p class="header-small-detail" style="color:white">สาขาที่เชี่ยวชาญ</p>
+                                <ul class="wrapper-small-detail" style="color:white;margin-left:25px">
                                     @php
                                     $raw_expertises = $teacher_read->expertise;
                                     $expertises = explode("," , $raw_expertises);
                                     for($i = 0 ; $i < count($expertises) ; $i++){
-                                        echo '<li class="list-small-detail" style="margin-left: 35px">'.$expertises[$i].'</li>';
+                                        echo '<li class="list-small-detail" style="margin-left: 5px">'.$expertises[$i].'</li>';
                                     }
                                     @endphp
                                 </ul>
@@ -85,7 +85,7 @@
                      {{-- NAV BAR --}}
 
 
-                <div style="margin: 20px 30px 50px"> {{-- CONTENT --}}
+                <div style="margin-Top:20px;margin-Bottom:50px;margin-left:50px;"> {{-- CONTENT --}}
                     <div class="panel-group" id="accordion">
                         @php
                             if(count ($researchs)) {
