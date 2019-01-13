@@ -60,15 +60,15 @@
 
 
 
-        <div class="card-read-person" style="font-weight: 100;background-color:white">
-            <div style="display: flex"> {{-- CONTAINER --}}
+        <div class="card-read-person" style="font-weight: 100;background-color: white">
+            <div class="card-read-background"> {{-- CONTAINER --}}
                 <div style="flex: 25%; background-color: #117167; border-radius: 50px 20px; padding: 15px; margin-bottom: 20px;  min-width: 220px"> {{-- LEFT IMAGE --}} 
                         <p class="name-th-card-read-person" style="text-align: center; color: #fff; margin-bottom: 5px; font-weight: 100">{{$teacher_read->name_th}}</p>
-                        <img class="image-header-card-person" style="width: 100%;border-radius:1.5px" src="{{url('image/crop/'.$teacher_read->image)}}"/>
+                        <img class="image-header-card-person" style="width: 100%;border-radius:2px" src="{{url('image/crop/'.$teacher_read->image)}}"/>
                         <br/>
                         <br/>
-                                <p class="header-small-detail" style="color:white">สาขาที่เชี่ยวชาญ</p>
-                                <ul class="wrapper-small-detail" style="color:white;margin-left:25px">
+                                <p class="header-small-detail" style="color: white;margin-left: 10px">สาขาที่เชี่ยวชาญ</p>
+                                <ul class="wrapper-small-detail" style="color: white;margin-left: 35px">
                                     @php
                                     $raw_expertises = $teacher_read->expertise;
                                     $expertises = explode("," , $raw_expertises);
@@ -85,7 +85,7 @@
                      {{-- NAV BAR --}}
 
 
-                <div style="margin-Top:20px;margin-Bottom:50px;margin-left:50px;"> {{-- CONTENT --}}
+                <div style="margin: 10px 30px 50px"> {{-- CONTENT --}}
                     <div class="panel-group" id="accordion">
                         @php
                             if(count ($researchs)) {
